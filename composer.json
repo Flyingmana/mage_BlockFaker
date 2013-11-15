@@ -1,0 +1,15 @@
+{
+    "name": "Flyingmana/Magento-BlockFaker",
+    "license": "MIT",
+    "type": "magento-module",
+    "description": "This extension helps to simulate certain application states for testing templates and help to review styling.",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name":"Daniel Fahlke aka Flyingmana",
+            "email":"flyingmana@googlemail.com"
+        }
+    ]
+}

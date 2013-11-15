@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Flyingmana_BlockFaker>
+            <version>1.0.0</version>
+        </Flyingmana_BlockFaker>
+    </modules>
+    <global>
+        <blocks>
+            <flyingmana_blockfaker>
+                <class>Flyingmana_BlockFaker_Block</class>
+            </flyingmana_blockfaker>
+        </blocks>
+        <helpers>
+            <flyingmana_blockfaker>
+                <class>Flyingmana_BlockFaker_Helper</class>
+            </flyingmana_blockfaker>
+        </helpers>
+    </global>
+</config>

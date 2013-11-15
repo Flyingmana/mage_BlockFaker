@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Flyingmana_BlockFaker>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends></depends>
+        </Flyingmana_BlockFaker>
+    </modules>
+</config>
