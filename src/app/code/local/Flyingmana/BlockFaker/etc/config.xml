@@ -17,4 +17,15 @@
             </flyingmana_blockfaker>
         </helpers>
     </global>
+    <frontend>
+        <routers>
+            <flyingmana_blockfaker>
+                <use>standard</use>
+                <args>
+                    <module>Flyingmana_BlockFaker</module>
+                    <frontName>blockfaker</frontName>
+                </args>
+            </flyingmana_blockfaker>
+        </routers>
+    </frontend>
 </config>
