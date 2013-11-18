@@ -91,11 +91,15 @@ class Flyingmana_BlockFaker_FakeController extends Mage_Core_Controller_Front_Ac
         );
         
         foreach( $helperMocks as $helperMock ){
+            foreach(array(false,true) as $displayMinimalPrice){
+            foreach(array(false,true) as $useLinkForAsLowAs){
 
             foreach( $this->createProductMocks() as $productMock ){
                 $priceBlock = $this->getLayout()->createBlock('flyingmana_blockfaker/product_price');
                 $priceBlock->setTemplate('catalog/product/price.phtml');
                 $priceBlock->setData('product', $productMock );
+                $priceBlock->setData('display_minimal_price', $displayMinimalPrice );
+                $priceBlock->setUseLinkForAsLowAs($useLinkForAsLowAs);;
                 $priceBlock->setHelperMock('tax',  $helperMock['tax']);
                 $priceBlock->setHelperMock('weee', $helperMock['weee']);
                 $this->getLayout()->getBlock('content')->append($priceBlock);
@@ -105,10 +109,17 @@ class Flyingmana_BlockFaker_FakeController extends Mage_Core_Controller_Front_Ac
                               '########<br/>'.
                               'ProductType: '.$productMock->getTypeId().
                               ' <br/>'.
+                              'display_minimal_price: '.(int)$displayMinimalPrice.
+                              ' <br/>'.
+                              'useLinkForAsLowAs: '.(int)$useLinkForAsLowAs.
+                              ' <br/>'.
                               var_export($helperMock,true).
                               '<br/>########<hr/>'
                         ))
                 );
+            }
+                
+            }
             }
         }
         
